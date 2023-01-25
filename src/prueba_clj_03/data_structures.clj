@@ -1,4 +1,4 @@
-(ns prueba-clj-03.example01
+(ns prueba-clj-03.data_structures
   (:gen-class))
 
 (defn error-message
