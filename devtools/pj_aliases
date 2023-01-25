@@ -1,0 +1,7 @@
+#/bin/bash
+export pj_clojure_home=$HOME/development/personal/clojure-projects
+export pj_home=$pj_clojure_home/prueba-clj-03
+alias clj_run="lein run"
+alias clj_package="lein uberjar"
+alias repl="lein repl"
+alias rst_pj="cd $pj_home; source devtools/pj_aliases; cd -; rstb"
