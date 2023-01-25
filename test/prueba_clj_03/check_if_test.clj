@@ -45,3 +45,11 @@
     (is (= (scnd_if sut) "less 2"))
   )
 )
+
+
+(deftest check_third_if
+  (testing "t1"
+    (is (= (third_if 5) "valid"))
+  )
+
+)

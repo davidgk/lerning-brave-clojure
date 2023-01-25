@@ -22,3 +22,13 @@
     "less 2"
   )
 )
+
+(defn third_if [x]
+  (if (>= x 2 and < x 20)
+    :valid
+    (if (> x 25 or < x 100)
+      :super_valid
+      :invalid)
+  )
+)
+
