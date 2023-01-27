@@ -1,4 +1,4 @@
-(ns prueba-clj-03.example-hobbit
+(ns prueba-clj-03.chapter_3.example-hobbit
   (:require [clojure.test :refer :all]))
 
 (def asym-hobbit-body-parts [{:name "head" :size 3}

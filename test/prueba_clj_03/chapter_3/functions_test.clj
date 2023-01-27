@@ -1,4 +1,4 @@
-(ns prueba-clj-03.functions-test
+(ns prueba-clj-03.chapter_3.functions-test
   (:require [clojure.test :refer :all]))
 
 

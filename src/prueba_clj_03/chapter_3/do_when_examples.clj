@@ -1,4 +1,4 @@
-(ns prueba-clj-03.do_when_examples
+(ns prueba-clj-03.chapter_3.do_when_examples
   (:gen-class))
 
 

@@ -1,6 +1,6 @@
-(ns prueba-clj-03.data_structures-test
+(ns prueba-clj-03.chapter_3.data_structures-test
   (:require [clojure.test :refer :all])
-  (:require [prueba-clj-03.data_structures :refer [error-message]]))
+  (:require [prueba-clj-03.chapter_3.data_structures :refer [error-message]]))
 
 (deftest error-message-test
   (testing "should message"

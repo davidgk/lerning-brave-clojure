@@ -1,6 +1,6 @@
-(ns prueba-clj-03.do_when_examples_tests
+(ns prueba-clj-03.chapter_3.do_when_examples_tests
   (:require [clojure.test :refer :all]
-  [prueba-clj-03.do_when_examples :refer :all]
+  [prueba-clj-03.chapter_3.do_when_examples_tests :refer :all]
 ))
 
 

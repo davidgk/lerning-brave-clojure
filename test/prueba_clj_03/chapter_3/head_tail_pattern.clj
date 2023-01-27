@@ -1,4 +1,4 @@
-(ns prueba-clj-03.head-tail-pattern
+(ns prueba-clj-03.chapter_3.head-tail-pattern
   (:require [clojure.test :refer :all]))
 
 

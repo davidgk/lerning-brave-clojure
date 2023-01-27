@@ -1,4 +1,4 @@
-(ns prueba-clj-03.check_if_test
+(ns prueba-clj-03.chapter_3.check_if_test
   (:require [clojure.test :refer :all]
             [prueba-clj-03.check_if :refer :all]
   )

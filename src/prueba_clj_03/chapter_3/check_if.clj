@@ -1,4 +1,4 @@
-(ns prueba-clj-03.check_if
+(ns prueba-clj-03.chapter_3.check_if
   (:gen-class))
 
 

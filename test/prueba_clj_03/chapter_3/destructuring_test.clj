@@ -1,4 +1,4 @@
-(ns prueba-clj-03.destructuring-test
+(ns prueba-clj-03.chapter_3.destructuring-test
   (:require [clojure.test :refer :all]))
 
 (def family '("lourdes" "gaby" "cata"))
