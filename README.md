@@ -1,8 +1,8 @@
 # prueba-clj-03
 
 ### Learning clojure based on:
-* (brave clojure)[https://www.braveclojure.com/]
-* (Reduce with clojure)[https://ericnormand.me/article/annotated-clojure-core-reduce]
+* [brave clojure](https://www.braveclojure.com)
+* [Reduce with clojure](https://ericnormand.me/article/annotated-clojure-core-reduce)
 
 ## Installation
 
