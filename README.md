@@ -4,6 +4,7 @@
 * [brave clojure](https://www.braveclojure.com)
 * [Reduce with clojure](https://ericnormand.me/article/annotated-clojure-core-reduce)
 * [use comp](https://blog.mrhaki.com/2020/05/in-clojure-we-can-use-comp-function-to.html)
+* [use repl](https://www.beyondtechnicallycorrect.com/2013/04/14/loading-and-using-namespaces-in-the-clojure-repl/)
 
 ## Installation
 

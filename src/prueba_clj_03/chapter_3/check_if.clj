@@ -24,11 +24,13 @@
 )
 
 (defn third_if [x]
-  (if (>= x 2 and < x 20)
+  (if (and (>= x 2) (< x 20) )
     :valid
-    (if (> x 25 or < x 100)
+    (if (or (> x 25) (< x 100))
       :super_valid
       :invalid)
   )
 )
 
+;(load "chapter_3/check_if")
+;(in-ns 'prueba-clj-03.chapter_3.check_if)
