@@ -43,3 +43,9 @@
   (testing "t2" (is (= (apilarSuma2 2 2) 6)))
 )
 
+(defn criticize-code   [criticism code]  `(str ~criticism (quote ~code)))
+(defn ap   [criticism code]  `(str ~criticism (quote ~code)))
+
+(deftest criticize-code-test
+  (testing "t1" (is (= (apply criticize-code "carlos" (+ 1 1)) "pepe")))
+)
