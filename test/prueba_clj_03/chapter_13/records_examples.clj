@@ -18,7 +18,7 @@
   (def pepito (Trabajador. "carlos" "12345"))
   (testing "t1" (is (= (:nombre pepito) "carlos" )))
   (testing "t1" (is (= (desarrolloSw pepito) "carlos desarrolla en java" )))
-  (testing "t1" (is (= (desarrolloParm pepito "python") "carlos desarrolla en python" )))
+  (testing "t1" (is (= (desarrolloParm pepito "python") "carlos desarronlla en python" )))
 )
 
 
