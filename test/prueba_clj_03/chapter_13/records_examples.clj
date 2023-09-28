@@ -7,18 +7,20 @@
   (desarrolloParm [x y] "desarrolla software")
 )
 
-(defrecord Trabajador [nombre legago]
+(defrecord Worker [nombre legago]
   Programador
   (desarrolloSw [x] (str nombre " desarrolla en java"))
   (desarrolloParm [x, y] (str nombre " desarrolla en " y))
 )
 
 
-(deftest TrabajadorTest
-  (def pepito (Trabajador. "carlos" "12345"))
+(deftest WorkerTest
+  (def pepito (Worker. "carlos" "12345"))
   (testing "t1" (is (= (:nombre pepito) "carlos" )))
-  (testing "t1" (is (= (desarrolloSw pepito) "carlos desarrolla en java" )))
-  (testing "t1" (is (= (desarrolloParm pepito "python") "carlos desarronlla en python" )))
+  (testing "t2" (is (= (desarrolloSw pepito) "carlos desarrolla en java" )))
+  (testing "t3" (is (= (desarrolloParm pepito "python") "carlos desarrolla en python" )))
+  (let [ramiro (->Worker "ramiro" "abc123")]
+    (testing "ramiroTest" (is (= (:nombre ramiro) "ramiro" ))))
 )
 
 

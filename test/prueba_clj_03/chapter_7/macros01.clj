@@ -49,3 +49,35 @@
 (deftest criticize-code-test
   (testing "t1" (is (= (apply criticize-code "carlos" (+ 1 1)) "pepe")))
 )
+
+;(-> (/ 144 12) (/ ,,, 2 3) str keyword list)
+(deftest macros_as_arrow_01
+  (let [a (-> (/ 144 12) (* 3))]
+    (testing "a1" (is (= a 36))))
+  (let [a (-> (/ 144 12) (* 3) str )]
+    (testing "a2" (is (= a "36"))))
+  (let [a (-> (/ 144 12) (* 3) str list)]
+    (testing "a2" (is (= a `("36")))))
+)
+
+(defn suma3 [x]
+  (+ x 3))
+(defn suma5 [x]
+  (+ x 5))
+(defn multi2 [x]
+  (* x 2))
+
+(deftest test_->>
+  (is (= (->> (suma3 2) suma5 multi2 ) 20))
+  )
+
+
+
+(deftest arrow_test
+  (is (= (->> (suma3 2) multi2 suma5 ) 15))
+  (is (= (-> (suma3 2) multi2 suma5 ) 15))
+  (is (= (-> (suma3 2) ((fn [x y] (+ x y)) 20)  suma5) 30))
+  (def carlos {:name "carlos" :data {:age 20 :address "Sarmiento"}})
+  (is (= (-> carlos :data :address ) "Sarmiento"))
+  (is (= (->> carlos :data :address ) "Sarmiento"))
+)

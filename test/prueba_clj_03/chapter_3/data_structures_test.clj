@@ -51,3 +51,16 @@
   (testing "t5" (is (= (set [1 1 1 2 3 3 4 4 4]) #{ 1 2 3 4})))
 
   )
+
+(defn add-to-list [values]
+  (let [mi-list []]
+    (doseq [_ (range values)]
+       (conj mi-list "pepe"))
+     mi-list
+  ))
+
+
+(deftest test-add-to-list
+  ; (testing "t1" (is (= 0 (count (add-to-list 0)))))
+  (testing "t2" (is (= ["pepe"] (add-to-list 1) )))
+)

@@ -19,8 +19,9 @@
 
 
 (deftest full-moon-behavior_test
-  (def wolfi (full-moon-behavior {:were-type :wolf :name "Rachel" }))
-  (is (= wolfi "Rachel will howl and murder"))
+  (let [wolfi (full-moon-behavior {:were-type :wolf :name "Rachel" })]
+    (is (= wolfi "Rachel will howl and murder")))
+
   (def simmons (full-moon-behavior {:were-type :simmons :name "Carlos" }))
   (is (= simmons "Carlos will encourage people"))
 
@@ -29,6 +30,23 @@
   (def whenDefault (full-moon-behavior {:were-type :otra_cosa :name "David" }))
   (is (= whenDefault "David no tiene nada que ver"))
 )
+(defn adding [a b ] (+ a b))
+(deftest adding-test
+  ;"aca defino la cantidad de parametros a ingresar"
+  (are [expr-expected expresion-obtained]
+    ; aca defino que es lo que se va a evaluar.
+    (= expr-expected expresion-obtained)
+      5 (adding 3 2)
+      10 (adding 6 5)
+      10 (adding 3 7)
+    ))
+(deftest check-are-with-maps
+  (are [result arg-map] (= result (+ (:x arg-map) (:y arg-map)))
+                        5      {:x 2 :y 3},
+                        10     {:x 6 :y 4})
+  (are [result arg-map_01 arg-map_02] (= result (+ (:x arg-map_01) (:x arg-map_02)))
+                        5      {:x 2 } { :x 3},
+                        10     {:x 4 } { :x 6}))
 
 ;; La idea es que multimetod define la funcion seleccionadora
 ; 1.. recibe un map.. y el parametro que recibe devuelve el tipo de metodo que va a usar..

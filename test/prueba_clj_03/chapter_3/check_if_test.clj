@@ -1,6 +1,6 @@
 (ns prueba-clj-03.chapter_3.check_if_test
   (:require [clojure.test :refer :all]
-            [prueba-clj-03.check_if :refer :all]
+            [prueba-clj-03.chapter_3.check_if :refer :all]
   )
 )
 
@@ -51,5 +51,27 @@
   (testing "t1"
     (is (= (third_if 5) "valid"))
   )
+)
 
+
+
+(defn using_when [a b]
+  (when (= a b)
+    "Carlos"
+  )
+)
+
+
+(deftest understanding_when
+  (is (=  (using_when 1 1) "Carlos"))
+  (is (=  (using_when 1 3) 5))
+  )
+
+(deftest check_merge
+   (let [
+         map_a { :tito "yo soy tito"}
+         ]
+    (testing "t1" (is (= (merge map_a {:carlos "yo soy carlos"}) {:tito "yo soy tito" :carlos "yo soy carlos"} )))
+    (testing "t2" (is (= (:tito map_a) "yo soy tito" ))))
+    (testing "t3" (is (= (if (:pepe map_a) ("empty") ("sth")) "empty" )))
 )
